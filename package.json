@@ -1,0 +1,7 @@
+{
+  "name": "sendgrid-form-submission",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ArshZilpe <ArshZilpe@users.noreply.github.com>",
+  "license": "MIT"
+}
