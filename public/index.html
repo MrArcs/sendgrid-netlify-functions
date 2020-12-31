@@ -17,5 +17,35 @@
         <textarea id="info" name="info"></textarea><br>
         <input type="submit" value="submit">
     </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    
+
+    <script async>
+        document.getElementById("form").addEventListener("submit", this.onSubmit);
+
+        async function onSubmit() {
+            var name = document.getElementById("name").value;
+            var burger = document.getElementById("burger").checked;
+            var fries = document.getElementById("fries").checked;
+            var info = document.getElementById("info").value;
+
+            try {
+                await axios.post(
+                    '/.netlify/functions/sendgrid',
+                    {
+                        message: `<br>` + "Name: " + name + `<br>` + "Burger: " + burger + `<br>` + "Fries: " + fries + `<br>` + "More Information: " + info + `<br>`
+                    }
+                )
+            } catch (e) {
+                console.error(e)
+                alert('Your message could not be sent. Sorry about that.')
+            }
+        }
+    </script>
+
+
+
+
 </body>
 </html>
