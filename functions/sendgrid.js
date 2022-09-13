@@ -7,8 +7,8 @@ function sendEmail(client, message, senderEmail, senderName) {
                 email: senderEmail,
                 name: senderName
             },
-            subject: 'SendGrid Form',
-            to: 'sendgridform123@gmail.com',
+            subject: 'SendGrid Form React',
+            to: 'arcs_mr@outlook.com',
             html: `New form submission<br/> ${message}`
 
         }
